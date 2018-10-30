@@ -1,4 +1,5 @@
 typedef long data_t;
+long *val;
 #ifdef FLOAT
 typedef float data_t;
 #define DATA_NAME "Float"

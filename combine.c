@@ -8,10 +8,8 @@ void combine1(vec_ptr v, data_t *dest) {
     long int i;
     *dest = IDENT;
     for (i = 0; i < vec_length(v); i++) {
-        data_t val;
-        val = get_vec_element(v, i, &val);
-        long *valAddress = (long *) val;
-        *dest = *dest OP *valAddress;
+        get_vec_element(v, i);
+        *dest = *dest OP *val;
     }
 }
 
