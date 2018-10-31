@@ -38,10 +38,10 @@ void free_vec(vec_ptr v) {
  * Retrieve vector element and store at dest.
  * Return 0 (out of bounds) or 1 (successful)
  */
-long get_vec_element(vec_ptr v, long index) {
+long get_vec_element(vec_ptr v, long index, data_t **val) {
     if (index >= v->len)
         return 0;
-    val = &(v->data[index]);
+    *val = &(v->data[index]);
     return 1;
 }
 

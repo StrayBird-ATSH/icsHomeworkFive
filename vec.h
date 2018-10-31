@@ -19,7 +19,7 @@ void free_vec(vec_ptr v);
  * Retrieve vector element and
  * return 0 (out of bounds) the address of the value
  */
-long get_vec_element(vec_ptr v, long index);
+long get_vec_element(vec_ptr v, long index, data_t **val);
 
 /* Macro version */
 #define GET_VEC_ELEMENT(v, index, dest) \
